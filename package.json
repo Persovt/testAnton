@@ -1,0 +1,26 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "trying to do",
+  "main": "index.js",
+  "scripts": {
+    "test": "todo",
+    "start": "echo hello",
+    "create": "md build",
+    "delete": "rmdir build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebHeroSchool/antonchenkoREACT.git"
+  },
+  "keywords": [
+    "react",
+    "antonchenko"
+  ],
+  "author": "antonchenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WebHeroSchool/antonchenkoREACT/issues"
+  },
+  "homepage": "https://github.com/WebHeroSchool/antonchenkoREACT#readme"
+}
