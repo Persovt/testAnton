@@ -1,10 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-const can = true;
-const word = 'Hi';
-const count = 11;
-const minus = 45 - 11
-
+import { count, lenght } from './number'
 
 function App() {
   return (
@@ -18,11 +14,7 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <p>
-          {word} guest. You have done {count} lessons from {45}, else {minus} let's go!
-        </p>
-        <p>
-         you can do it {can && 'if is true'} {can ? 'if is true' : 'if is false'}
-          {undefined}  {null} {true} {false}
+          If you multiply {count} by {lenght} you get {count * lenght}
         </p>
         <a
           className="App-link"
