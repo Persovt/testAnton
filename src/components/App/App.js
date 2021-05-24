@@ -4,18 +4,19 @@ import ItemList from '../ItemList/ItemList';
 import Footer from '../Footer/Footer';
 import styles from './App.module.css';
 
-const todpItem = 'write new app'
-
 const App = () => {
     const items = [
         {
-            value: 'write new app'
+            value: 'write new app',
+            isDone: true
         },
         {
-            value: 'write props'
+            value: 'write props',
+            isDone: true
         },
         {
-            value: 'will done all deals'
+            value: 'will done all deals',
+            isDone: false
         }
     ];
 
