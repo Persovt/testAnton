@@ -3,9 +3,14 @@ import TextField from '@material-ui/core/TextField';
 
 const InputItem = () => (<div>
     <TextField 
-         id="outlined-disabled"
-         label="Input task"
-         variant="outlined"
+        id="standard-full-width"
+        style={{ margin: 8 }}
+        placeholder="Type the name of the task"
+        fullWidth
+        margin="normal"
+        InputLabelProps={{
+            shrink: true,
+        }}
     />
     </div>)
 

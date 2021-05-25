@@ -1,0 +1,12 @@
+.footer {
+    color: #d3d3d3;
+    margin-top: 4%;
+}
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+.button {
+    font-size: 8px;
+}

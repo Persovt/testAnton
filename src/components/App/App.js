@@ -25,7 +25,7 @@ const App = () => {
         <h1 className={styles.title}>Important deals</h1>
         <InputItem />
         <ItemList items={items}/>
-        <Footer count={3} />
+        <Footer count={1} />
     </div>);
 }
 
