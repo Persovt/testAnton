@@ -5,8 +5,8 @@ import Footer from '../Footer/Footer';
 import styles from './App.module.css';
 
 class App extends React.Component {
-    render () {
-        const items = [
+    state = {
+        items: [
             {
                 value: 'write new app',
                 isDone: true
@@ -19,13 +19,14 @@ class App extends React.Component {
                 value: 'will done all deals',
                 isDone: false
             }
-        ];
-    
+        ]
+    };
+    render () {
         return( 
         <div className={styles.wrap}>
             <h1 className={styles.title}>Important deals</h1>
             <InputItem />
-            <ItemList items={items}/>
+            <ItemList items={this.state.items}/>
             <Footer count={1} />
         </div>);
     }
