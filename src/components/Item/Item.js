@@ -5,6 +5,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import DeleteIcon from '@material-ui/icons/Delete';
 
 const Item = ({ value, isDone }) => 
+
 <div className={styles.wrap}>
 <Checkbox
     color="default"
@@ -20,6 +21,8 @@ const Item = ({ value, isDone }) =>
 </span>
 
 <DeleteIcon className={styles.btn} fontSize="large" />
-</div>;
+</div>
+
+
 
 export default Item;
