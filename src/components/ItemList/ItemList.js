@@ -7,7 +7,7 @@ const ItemList = ({ items, onClickDone }) => (<List>
       <Item 
         value={item.value} 
         isDone={item.isDone} 
-        id={items.id} 
+        id={item.id} 
         onClickDone={onClickDone} 
         />
   </li>)}
