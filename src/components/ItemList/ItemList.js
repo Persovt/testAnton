@@ -4,7 +4,7 @@ import List from '@material-ui/core/List';
 
 const ItemList = ({ items, onClickDone }) => (<List>
   {items.map(item => <li key={item.value}>
-      <Item value={item.value} isDone={item.IsDone} onClickDone={onClickDone} />
+      <Item value={item.value} isDone={item.isDone} onClickDone={onClickDone} />
   </li>)}
 </List>);
 

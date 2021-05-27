@@ -20,7 +20,6 @@ const Item = ({ value, isDone, onClickDone }) => (
 			})
 		}> {value}
 		</label>
-
              <DeleteIcon className={styles.btn} fontSize="large" />
        </div>);
 
