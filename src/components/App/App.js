@@ -28,7 +28,7 @@ onClickDone = isDone => console.log(isDone);
         <div className={styles.wrap}>
                 <h1 className={styles.title}>Important deals</h1>
                 <InputItem />
-                <ItemList items={this.state.items}/>
+                <ItemList items={this.state.items} onClickDone={this.onClickDone} />
                 <Footer count={1} />
         </div>);
     }
