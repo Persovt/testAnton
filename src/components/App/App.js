@@ -23,7 +23,7 @@ class App extends React.Component {
                 id: 3
             }
         ],
-        count: 1
+        count: 3
     };
 
 onClickDone = id => {
@@ -42,25 +42,18 @@ onClickDone = id => {
 
 onClickDelete = id => this.setState(state => ({ items: state.items.filter(item => item.id !== id)}));
 
-onClickAdd = value => {
-        if (value === '') {
-            this.setState((state) => ({isError: true}));
-        } else {
-            this.setState(state => ({
-                items:[
-                    ...state.items,
-                    {
-                        value,
-                        isDone: false,
-                        id: state.count + 1
-                    }        
-                ],
-                  count: state.count + 1,
-                  isError: false
-                }));
-        } 
-};
-
+onClickAdd = value => this.setState(state => ({
+            items:[
+             ...state.items,
+             {
+                  value,
+                  isDone: false,
+                    id: state.count + 1
+             }        
+            ],
+        count: state.count + 1,
+    }));
+ 
 
   render () {
         return ( 
@@ -68,7 +61,6 @@ onClickAdd = value => {
                 <h1 className={styles.title}>Important deals</h1>
                 <InputItem 
                 onClickAdd={this.onClickAdd}
-                isError={this.props.isError}
                 />
                 <ItemList 
                    items={this.state.items} 
