@@ -40,7 +40,7 @@ class InputItem extends React.Component {
             textField = <TextField
                 error
                 id="standard-full-width"
-                placeholder="The filed musn't be empity"
+                placeholder="The field musn't be empity"
                 fullWidth
                 value={this.state.inputValue}
                 isError={this.props.isError}
