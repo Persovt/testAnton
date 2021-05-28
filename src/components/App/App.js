@@ -37,23 +37,46 @@ onClickDone = id => {
         return newItem;
     });
 
-    this.setState({ items: newItemList})
+    this.setState({ items: newItemList});
 };
+
 onClickDelete = id => this.setState(state => ({ items: state.items.filter(item => item.id !== id)}));
 
-    render () {
-        return( 
+onClickAdd = value => {
+        if (value === '') {
+            this.setState((state) => ({isError: true}));
+        } else {
+            this.setState(state => ({
+                items:[
+                    ...state.items,
+                    {
+                        value,
+                        isDone: false,
+                        id: state.count + 1
+                    }        
+                ],
+                  count: state.count + 1,
+                  isError: false
+                }));
+        } 
+};
+
+
+  render () {
+        return ( 
         <div className={styles.wrap}>
                 <h1 className={styles.title}>Important deals</h1>
-                <InputItem />
-                <ItemList items={this.state.items} 
-                onClickDone={this.onClickDone} 
-                onClickDelete={this.onClickDelete} />
+                <InputItem 
+                onClickAdd={this.onClickAdd}
+                isError={this.props.isError}
+                />
+                <ItemList 
+                   items={this.state.items} 
+                   onClickDone={this.onClickDone} 
+                   onClickDelete={this.onClickDelete} />
                 <Footer count={this.state.count} />
         </div>);
     }
 };
-
-    
 
 export default App;
