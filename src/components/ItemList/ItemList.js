@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import List from '@material-ui/core/List';
 import Item from '../Item/Item';
 
@@ -14,11 +15,10 @@ const ItemList = ({ items, onClickDone, onClickDelete }) => (<List>
   </li>)}
 </List>);
 
-ItemList.defaultProps = {
-  value: 'add task',
-  isDone: false,
-  id: 0
+ItemList.propTypes = {
+items: PropTypes.array.isRequired,
+onClickDone: PropTypes.func.isRequired,
+onClickDelete: PropTypes.func.isRequired
 };
-
 
 export default ItemList;
