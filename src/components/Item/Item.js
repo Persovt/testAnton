@@ -1,18 +1,31 @@
 import React from 'react';
 import classnames from 'classnames';
 import styles from './Item.module.css';
+import PropTypes from 'prop-types';
 import Checkbox from '@material-ui/core/Checkbox';
 import DeleteIcon from '@material-ui/icons/Delete';
 
+class Item extends React.Component {
+	componentDidMount () {
+		console.log('componentDidMount');
+	}
+	compomentDidUpdate () {
+		console.log('compomentDidUpdate');
+	}
+	componentWillUnmount () {
+		console.log('componentWillUnmount');
+	}
 
-const Item = ({ value, isDone, onClickDone, onClickDelete, id }) => (
-    <div className={styles.wrap}>
+	render () {
+		const { value, isDone, onClickDone, onClickDelete, id } = this.props;
+
+	  return (<div className={styles.wrap}>
 		<Checkbox
-            checked={isDone}
-	        color="default"
-	        inputProps={{ 'aria-label': 'primary checkbox' }}
-            onClick={() => onClickDone(id)}
-	      />
+			checked={isDone}
+			color="default"
+			inputProps={{ 'aria-label': 'primary checkbox' }}
+			onClick={() => onClickDone(id)}
+		  />
 		<label className = {
 			classnames({
 				[styles.item]: true,
@@ -20,8 +33,18 @@ const Item = ({ value, isDone, onClickDone, onClickDelete, id }) => (
 			})
 		}> {value}
 		</label>
-             <DeleteIcon className={styles.btn} fontSize="large"
-             onClick={() => onClickDelete(id)} />
-       </div>);
+			 <DeleteIcon className={styles.btn} fontSize="large"
+			 onClick={() => onClickDelete(id)} />
+	   </div>);
+  }
+}
+
+Item.propTypes = {
+    value: PropTypes.string.isRequired,
+	isDone: PropTypes.bool.isRequired,
+	onClickDone: PropTypes.func.isRequired,
+	onClickDelete: PropTypes.func.isRequired,
+	id: PropTypes.number.isRequired
+};
 
 export default Item;

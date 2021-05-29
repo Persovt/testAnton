@@ -4,12 +4,12 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 
 class InputItem extends React.Component {
+
     state = {
         inputValue: '',
         isError: false
     };
 
-   
   onButtonClick = () => {
      if (this.state.inputValue == false) {
       this.setState({
