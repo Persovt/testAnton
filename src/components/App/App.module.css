@@ -1,7 +1,8 @@
 .wrap {
     margin: auto;
-    width: 30%;
+    width: 40%;
 }
 .title {
     font-family: Padauk;
+    text-align: center;
 }

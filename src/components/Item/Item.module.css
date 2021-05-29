@@ -2,5 +2,15 @@
     color: black;
 }
 .done {
-    color:darkblue;
+    text-decoration: line-through;
+}
+.btn {
+    cursor: pointer;
+    color: darkgrey;
+} 
+.wrap {
+    display: flex;
+    align-items:center;
+    justify-content: space-between; 
+    margin-bottom: 2%;
 }
