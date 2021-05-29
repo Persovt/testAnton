@@ -5,10 +5,6 @@ import Item from '../Item/Item';
 
 class ItemList extends React.Component {
 
-  compomentDidUpdate () {
-		console.log('compomentDidUpdate');
-	}
-  
   render () 
   { const { items, onClickDone, onClickDelete } = this.props;
 

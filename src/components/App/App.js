@@ -5,6 +5,11 @@ import Footer from '../Footer/Footer';
 import styles from './App.module.css';
 
 class App extends React.Component {
+    
+  compomentDidUpdate () {
+    console.log('compomentDidUpdate');
+}
+
     state = {
         items: [
             {
