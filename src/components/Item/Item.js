@@ -7,10 +7,13 @@ import DeleteIcon from '@material-ui/icons/Delete';
 
 class Item extends React.Component {
 	componentDidMount () {
-		this.timerId = setInterval (() => console.log('Interval'), 1000);
+		console.log('componentDidMount');
+	}
+	compomentDidUpdate () {
+		console.log('compomentDidUpdate');
 	}
 	componentWillUnmount () {
-		clearInterval(this.timerId);
+		console.log('componentWillUnmount');
 	}
 
 	render () {

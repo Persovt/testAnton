@@ -45,15 +45,22 @@ onClickDone = id => {
     this.setState({ items: newItemList});
 };
 
-onClickDelete = id => this.setState(state => ({ items: state.items.filter(item => item.id !== id)}));
+onClickDelete = id => {
+    const newItemList = this.state.items.filter (item => item.id !== id);
+    this.setState(  {
+        items: newItemList,
+        count: this.state.count - 1
+    })
+};
+
 
 onClickAdd = value => this.setState(state => ({
             items:[
              ...state.items,
              {
-                  value,
-                  isDone: false,
-                    id: state.count + 1
+                value,
+                isDone: false,
+                id: state.count + 1
              }        
             ],
         count: state.count + 1,
