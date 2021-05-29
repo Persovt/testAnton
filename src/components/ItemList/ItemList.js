@@ -3,17 +3,29 @@ import PropTypes from 'prop-types';
 import List from '@material-ui/core/List';
 import Item from '../Item/Item';
 
-const ItemList = ({ items, onClickDone, onClickDelete }) => (<List>
-  {items.map(item => <li key={item.id}>
-     <Item 
-       value={item.value} 
-       isDone={item.isDone} 
-       id={item.id} 
-       onClickDone={onClickDone} 
-       onClickDelete={onClickDelete}
-       />
-  </li>)}
-</List>);
+class ItemList extends React.Component {
+
+  compomentDidUpdate () {
+		console.log('compomentDidUpdate');
+	}
+  
+  render () 
+  { const { items, onClickDone, onClickDelete } = this.props;
+
+    return ( <List>
+      {items.map(item => <li key={item.id}>
+         <Item 
+           value={item.value} 
+           isDone={item.isDone} 
+           id={item.id} 
+           onClickDone={onClickDone} 
+           onClickDelete={onClickDelete}
+           />
+      </li>)}
+    </List>);
+
+    }
+  }
 
 ItemList.propTypes = {
 items: PropTypes.array.isRequired,

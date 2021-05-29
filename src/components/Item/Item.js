@@ -5,12 +5,9 @@ import PropTypes from 'prop-types';
 import Checkbox from '@material-ui/core/Checkbox';
 import DeleteIcon from '@material-ui/icons/Delete';
 
-class Item extends React.Component {4
+class Item extends React.Component {
 	componentDidMount () {
 		console.log('componentDidMount');
-	}
-	compomentDidUpdate () {
-		console.log('compomentDidUpdate');
 	}
 	componentWillUnmount () {
 		console.log('componentWillUnmount');
