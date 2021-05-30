@@ -1,8 +1,13 @@
 .wrap {
     margin: auto;
     width: 40%;
+    display: grid;
 }
-.title {
-    font-family: Padauk;
-    text-align: center;
+.panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+.link {
+    text-decoration: none;
 }
