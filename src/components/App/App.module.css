@@ -2,12 +2,15 @@
     margin: auto;
     width: 40%;
     display: grid;
+    grid-template-areas: 'panel content content' ;
 }
 .panel {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
+    grid-area: panel;
+}
+.content {
+    grid-area: content;
 }
 .link {
     text-decoration: none;
+    color: black;
 }
