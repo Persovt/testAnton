@@ -13,7 +13,7 @@ class Item extends React.Component {
 	  return (<div className={styles.wrap}>
 		<Checkbox
 			checked={isDone}
-			color="default"
+			style={{color:"DarkViolet"}}
 			inputProps={{ 'aria-label': 'primary checkbox' }}
 			onClick={() => onClickDone(id)}
 		  />

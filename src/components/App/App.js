@@ -1,4 +1,4 @@
-import Reactt, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import InputItem from '../InputItem/InputItem';
 import ItemList from '../ItemList/ItemList';
 import Footer from '../Footer/Footer';
