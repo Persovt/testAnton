@@ -20,8 +20,7 @@ class InputItem extends React.Component {
         inputValue: '',
         isError: false
       })
-
-      this.props.onClickAdd(this.state.inputValue.toUpperCase());
+      this.props.onClickAdd(this.state.inputValue);
     }
   };
 

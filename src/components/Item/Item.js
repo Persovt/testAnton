@@ -6,13 +6,6 @@ import Checkbox from '@material-ui/core/Checkbox';
 import DeleteIcon from '@material-ui/icons/Delete';
 
 class Item extends React.Component {
-	componentDidMount () {
-		console.log('componentDidMount');
-	}
-
-	componentWillUnmount () {
-		console.log('componentWillUnmount');
-	}
 
 	render () {
 		const { value, isDone, onClickDone, onClickDelete, id } = this.props;
