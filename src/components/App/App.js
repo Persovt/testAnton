@@ -6,8 +6,8 @@ import styles from './App.module.css';
 
 class App extends React.Component {
     
-  compomentDidUpdate () {
-    console.log('compomentDidUpdate');
+  componentDidUpdate () {
+    console.log('componentDidUpdate');
 }
 
     state = {
