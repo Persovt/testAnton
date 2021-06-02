@@ -3,56 +3,52 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 
-const InputItem = ({
-  onClickAdd,
-}) => {
+class InputItem extends React.Component {
+  state = {
+    inputValue: '',
+    errorStatus: false,
+    helperText: ' ',
+  };
 
-const initialState =  {
-    textField: {
+  onButtonClick = () => {
+    this.setState({
       inputValue: '',
       errorStatus: false,
       helperText: ' ',
-    },
-  };
+    });
 
-const [inputValue,setInputvalue,] = useState(initialState.textField.inputValue);
-
-const [errorStatus,setErrorStatus,] = useState(initialState.textField.errorStatus);
-
-const [helperText,setHelperText,] = useState(initialState.textField.helperText);
-
-
-const onButtonClick = () => {
-     setInputvalue('');
-     setErrorStatus(false);
-     setHelperText(' ');
-
- if (inputValue) {
-      onClickAdd(inputValue);
-} else { setInputvalue('');
-    setErrorStatus(true);
-    setHelperText("The field must not be empity");
+    if (this.state.inputValue && this.state.inputValue.length < 20) {
+      this.props.onClickAdd(this.state.inputValue);
+    } else {
+      this.setState({
+        errorStatus: true,
+        helperText: 'The field must not be empity or you exceeded the simbol limit',
+      });
+    }
   } 
-};
 
- return (<Grid > 
-    <TextField
-        error={errorStatus}
-        helperText={helperText}
-        className
+ render() {
+
+    return (<Grid>
+       <TextField 
+        error={this.state.errorStatus}
+        helperText={this.state.helperText}
         fullWidth
-        label="Type the name of the task">
-    </TextField>
-           
+        label="Type the name of the task"
+        margin="dense"
+        value={this.state.inputValue}
+        variant="outlined"
+        onChange={event => this.setState({inputValue: event.target.value })} />
+
     <Button 
         variant='contained'
         fullWidth
         style={{backgroundColor:"DarkViolet"}}
-        onClick={onButtonClick}
-        onClickAdd={onClickAdd}> 
+        onClick={this.onButtonClick}> 
                 Add
     </Button>
-  </Grid>);
-};
+    </Grid>);
+  }
+}
 
 export default InputItem;
