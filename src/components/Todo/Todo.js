@@ -57,7 +57,6 @@ const onClickDelete = id => {
         setCount (count - 1)
 };
 
-
 const onClickAdd = value => {
     const newItemList = [
         ...items,
@@ -83,7 +82,6 @@ const onClickAdd = value => {
                onClickDelete={onClickDelete} />
             <Footer count={count} />
     </div>);
- }
-       
+ }    
 
 export default Todo;

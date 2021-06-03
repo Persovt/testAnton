@@ -1,8 +1,31 @@
-.about {
-    min-width: 100%;
-    min-height: 100%;
+.img {
+    width: 50%;
+    height: 50%;
+    border-radius: 7%;
+}
+.user {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
+}
+.username {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.username:hover {
+    color: darkviolet;
+}
+.link{
+    text-decoration: none;
+    color: black;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.link:hover{
+    color:cornflowerblue
+} 
+h1 {
+    text-align: center;
+    color: darkviolet;
 }
